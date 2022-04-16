@@ -64,10 +64,7 @@ function CheckWinner()
             }
         }
         if (h1 == 3 || h2 == 3 ) {
-            console.log(listWin);
-            console.log(h2 > h1 ? "player 2 is":"player 1 is" ," winner",bigList);
             EndGame.push(bigList);
-            control.classList.add("pl");
             if (h2 > h1) {
                 player2Points++;
             }
@@ -207,7 +204,7 @@ function ChangeName(player,PN){
 function ChangeImgProfile(img, imgNum) {
     if (imgNum <= 6)
     {
-        img.children[0].children[0].children[0].src = "./img/profileIMG/"+imgNum+".png";
+        img.children[0].children[0].children[0].src = imgNum+".png";
     }
 }
 
