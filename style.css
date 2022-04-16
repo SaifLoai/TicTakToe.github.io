@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,900&family=Righteous&family=Shadows+Into+Light&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: linear-gradient(90deg, rgba(38,38,38,1) 45%, rgba(125,0,65,1) 50%, rgba(224,0,117,1) 55%);
+    width: 100%;
+}
+.userPoint
+ {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.userOne, .userTwo
+ {
+    width: 45%;
+    height: 90%;
+    background: #ffffff73;
+    border-radius: 5px;
+    font-family: 'Righteous', cursive;
+    position: relative;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+}
+.play 
+{
+    border-color: #fff;
+    background: #d4d4d4;
+}
+.boxProfile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+.imgProfile
+{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 15%;
+    height: 100%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.imgProfile:hover ~ .editIMG,
+.editIMG:hover
+{
+    transform: scale(1);
+}
+
+.imgProfile img {
+    position: relative;
+    width: 130%;
+    height: 135%;
+    bottom: 12px;
+    right: 12px;
+}
+
+.choseImg {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 25%;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 15px;
+    transform: scale(0);
+    top: 14%;
+    left: 35%;
+    transition: 1s;
+    z-index: 999;
+}
+.choseImg.Player1,
+.choseImg.Player2
+{
+    transform: scale(1);
+    transition: 1s;
+}
+.choseImg.Player1
+{
+    left: 4%;
+}
+.choseImg.Player2
+{
+    left: 55%;
+}
+
+.img {
+    width: 16.7%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.img img {
+    width: 100%;
+    height: 50px;
+}
+.points
+{
+    width: 25%;
+}
+.Name{
+    text-shadow: 0 0 5px #d4d4d4;
+    width: 55%;
+}
+.Name > input {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-family: 'Righteous', cursive;
+    text-shadow: 0 0 5px #d4d4d4;
+}
+.Name,.points
+{
+    color: #fff;
+    font-size: 25px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editIMG {
+    color: #fff;
+    position: absolute;
+    left: 5px;
+    background: #646464ab;
+    border-radius: 50%;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    transition: .5s;
+    transform: scale(0);
+    cursor: pointer;
+}
+
+.EditName {
+    position: absolute;
+    font-size: 25px;
+    right: 158px;
+    height: 100%;
+    background: rgba(88, 88, 88, 0.663);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+    transform: scale(0);
+    width: 55%;
+}
+.Name:hover ~ .EditName,
+.EditName:hover
+{
+    transform: scale(1);
+}
+.Name.Edit:hover ~ .EditName
+{
+    transform: scale(0);
+}
+
+
+.ALlBox {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+.controls {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    color: #e8e8e8;
+    background: #ff6347b8;
+    border-width: thick;
+    border-style: double;
+    border-color: #ffcdd2a3;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10em;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    z-index: 99999;
+}
+.controls.pl
+{
+    transform: translateY(-50%) scale(1.5);
+}
+.boxs
+ {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 512px;
+    height: 444px;
+    position: relative;
+    z-index: 9;
+}
+.box 
+{
+    width: 150px;
+    height: 130px;
+    background: #ffffffa3;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.box:hover
+{
+    border-color: #d4d4d4;
+}
+.box::before
+{
+    transition: .3s;
+}
+.box:hover::before
+{
+    content: "?";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box.ACTBOX:hover::before
+{
+    content: "";
+    position: absolute;
+}
+.box > ion-icon
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.box > ion-icon[name="radio-button-off-outline"]
+{
+    color: slategray;
+}
+.box > ion-icon[name="close-outline"]
+{
+    color: tomato;
+}
+
+.BagTME {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 40px;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.BagTME ion-icon
+{
+    font-size: 270px;
+    opacity: 0.4;
+}
+.BagTME ion-icon.OPlayer
+{
+    color: rgba(38,38,38,1);
+}
+.BagTME ion-icon.XPlayer
+{
+    color: rgba(224,0,117,1);
+}
+.BagTME h1 {
+    transform: translateY(30px);
+    font-size: 35px;
+    color: #fff;
+    font-family: 'Righteous', cursive;
+    opacity: 0.5;
+    letter-spacing: 1em;
+}
+
+
+
+.lineWiner {
+    width: 0;
+    position: absolute;
+    height: 10px;
+    background: #4caf50;
+    border-radius: 10px;
+    transition: .5s;
+    z-index: 999;
+}
+.lineWiner.win0,
+.lineWiner.win1,
+.lineWiner.win5,
+.lineWiner.win6,
+.lineWiner.win7
+{
+    width: 45%;
+}
+.lineWiner.win7,
+.lineWiner.win2,
+.lineWiner.win1
+{
+    transform: rotate(90deg);
+    top: 57%;
+    width: 37%;
+}
+.lineWiner.win0
+{
+    top: 16%;
+}
+.lineWiner.win1
+{
+    left: 18.3%;
+}
+
+.lineWiner.win3 {
+    transform: rotate(40deg);
+    top: 47.4%;
+    width: 56%;
+}
+.lineWiner.win4
+{
+    transform: rotate(140deg);
+    top: 48%;
+    width: 55%;
+}
+.lineWiner.win5
+{
+    bottom: 50%;
+}
+.lineWiner.win6
+{
+    bottom: 18.5%;
+}
+.lineWiner.win7
+{
+    right: 18.3%;
+}
